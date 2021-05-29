@@ -1,0 +1,105 @@
+.section-banner {
+	padding: rem(80px) 0;
+	background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%), url(images/bg-top.jpg) no-repeat 50% / cover;
+	color: $white;
+	min-height: rem(500px);
+
+	@include media('>=tablet') {
+		min-height: rem(650px);
+	}
+
+	@include media('>=desktop') {
+		min-height: rem(962px);
+		padding: rem(100px) 0;
+	}
+
+	.block-banner {
+		text-align: center;
+
+		@include media('>=desktop') {
+			padding: 0 rem(50px) rem(113px);
+			text-align: left;
+		}
+
+		@include media('>=large') {
+			padding: 0 rem(100px) rem(113px);
+			text-align: left;
+		}
+
+		.title {
+			margin-bottom: rem(20px);
+
+			@include media('>=desktop') {
+				width: 70%;
+				margin-bottom: rem(30px);
+			}
+		}
+
+		.text {
+			margin-bottom: rem(20px);
+
+			@include media('>=desktop') {
+				width: 50%;
+				margin-bottom: rem(50px);
+			}
+		}
+
+		.input {
+			margin-bottom: rem(20px);
+
+			@include media('>=tablet') {
+				flex: 1 1 auto;
+				margin-bottom: rem(50px);
+
+				&:first-child {
+					margin-right: rem(25px);
+
+					@include media('>=large') {
+						margin-right: rem(60px);
+					}
+				}
+			}
+
+			@include media('>=desktop') {
+				flex: 0 1 auto;
+				margin-bottom: 0;
+				margin-right: rem(25px);
+			}
+
+			@include media('>=large') {
+				margin-right: rem(60px);
+			}
+		}
+
+		input {
+			display: block;
+			width: 100%;
+			text-align: center;
+
+			@include media('>=tablet') {
+				text-align: left;
+			}
+
+			@include media('>=desktop') {
+				font-size: rem(18px);
+			}
+		}
+
+		button {
+			width: 100%;
+			padding: rem(10px) rem(55px);
+
+			@include media('>=tablet') {
+				width: auto;
+				margin: 0 auto;
+			}
+
+			@include media('>=desktop') {
+				margin: 0;
+			}
+
+
+		}
+	}
+
+}

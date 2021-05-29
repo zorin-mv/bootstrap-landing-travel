@@ -1,0 +1,96 @@
+.section-places {
+	.title {
+		margin-bottom: rem(35px);
+
+		h2 {
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				@extend %underline;
+				left: 0;
+				width: rem(153px);
+				background-color: $blue;
+				margin-top: rem(2px);
+
+				@include media('>=desktop') {
+					width: rem(253px);
+				}
+			}
+
+		}
+	}
+
+	.slider-item {
+		margin-bottom: rem(20px);
+
+
+		@include media('>=desktop') {
+			margin-bottom: 0;
+			padding: rem(20px);
+
+			&:nth-last-child(1),
+			&:nth-last-child(2),
+			&:nth-last-child(3) {
+				padding-bottom: 0;
+			}
+
+
+		}
+
+		.visual {
+			position: relative;
+			margin-bottom: rem(30px);
+
+			@include media('>=desktop') {
+				margin-bottom: rem(40px);
+			}
+
+			.overlay {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				padding: rem(10px) rem(25px);
+				background: rgba(21, 24, 36, 0.6);
+				color: $white;
+
+				a {
+					text-decoration: none;
+					color: $white;
+
+					&:hover {
+						svg {
+							path {
+								fill: #f00;
+							}
+						}
+					}
+
+					&:first-child {
+						margin-right: rem(10px);
+					}
+
+					svg {
+						path {
+							transition: fill 0.5s;
+						}
+					}
+				
+				}
+			}
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			padding: rem(7px) rem(20px);
+
+			@include media('>=desktop') {
+				width: auto;
+			}
+		}
+	}
+
+}

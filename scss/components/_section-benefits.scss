@@ -1,0 +1,84 @@
+.section-benefits {
+	background-color: $white;
+
+	@include media('>=desktop') {
+		margin-top: rem(-170px);
+		padding: rem(70px) rem(50px);
+		box-shadow: 0 rem(2px) rem(20px) rgba(21, 24, 36, 0.15993);
+	}
+
+	@include media('>=large') {
+		padding: rem(90px) rem(100px);
+		margin-top: rem(-223px);
+	}
+
+	.title {
+		margin-bottom: rem(50px);
+
+		@include media('>=tablet') {
+			margin-bottom: rem(60px);
+		}
+
+		@include media('>=desktop') {
+			margin-bottom: rem(80px);
+		}
+
+		@include media('>=large') {
+			margin-bottom: rem(100px);
+		}
+
+	}
+
+	.card {
+		border: 0;
+		margin-bottom: rem(40px);
+
+		@include media('>=tablet') {
+			margin-bottom: 0;
+		}
+
+		@include media('>=large') {
+			padding: rem(30px) rem(10px);
+		}
+
+		.card-title {
+			margin-bottom: rem(15px);
+
+			@include media('>=desktop') {
+				// min-height: rem(66px);
+				margin-bottom: rem(20px);
+			}
+
+			@include media('>=large') {
+				min-height: 0;
+			}
+
+			h4 {
+
+				@include media('>=tablet') {
+					letter-spacing: -0.02em;
+				}
+
+			}
+		}
+
+		.visual {
+			margin-bottom: rem(15px);
+
+			@include media('>=desktop') {
+				margin-bottom: rem(30px);
+			}
+		}
+
+		.text {
+
+			@include media('>=tablet') {
+				margin-bottom: rem(20px);
+			}
+
+			@include media('>=desktop') {
+				margin-bottom: rem(30px);
+			}
+		}
+	}
+}

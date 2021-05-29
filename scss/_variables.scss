@@ -1,0 +1,29 @@
+$main-color: #000;
+$white: #fff;
+$blue: #006DFE;
+$fz: 16px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1290px
+);
+
+%underline {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: rem(2px);
+  bottom: rem(-4px);
+  transition: 0.8s;
+}

@@ -1,0 +1,87 @@
+.section-inspiration {
+
+	.top-content {
+		margin-bottom: rem(20px);
+		
+		@include media('>=desktop') {
+			margin-bottom: rem(35px);
+		}
+
+		.title {
+
+			h2 {
+				position: relative;
+
+				&::before {
+					content: '';
+					display: block;
+					@extend %underline;
+					left: 0;
+					width: rem(153px);
+					background-color: $blue;
+					margin-top: rem(2px);
+
+					@include media('>=desktop') {
+						width: rem(253px);
+					}
+				}
+
+			}
+		}
+
+		.link {
+			margin-bottom: rem(10px);
+
+			@include media('>=desktop') {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.slider-inspiration {
+
+		@include media('>=desktop') {
+			margin: 0 rem(-5px);
+		}
+
+		.slider-item {
+			position: relative;
+			margin-bottom: rem(20px);
+
+			@include media('>=desktop') {
+				margin-bottom: rem(10px);
+				padding: 0 rem(5px);
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: rem(15px);
+			right: rem(15px);
+			background: rgba(21, 24, 36, 0.4);
+
+			@include media('>=desktop') {
+				left: rem(5px);
+				right: rem(5px);
+			}
+		}
+
+		.description {
+			position: absolute;
+			left: 30px;
+			bottom: 10px;
+
+			strong {
+				color: $white;
+				font-weight: 700;
+				font-size: rem(30px);
+
+				@include media('>=tablet') {
+					font-size: rem(50px);
+				}
+			}
+		}
+	}
+}

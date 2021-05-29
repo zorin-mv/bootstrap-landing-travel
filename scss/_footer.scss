@@ -1,0 +1,61 @@
+footer {
+    padding: rem(50px) 0;
+    background-color: #0E1D28;
+    color: $white;
+
+    @include media('>=tablet') {
+        padding: rem(70px) 0;
+    }
+
+    @include media('>=desktop') {
+        padding: rem(120px) 0;
+    }
+
+    .footer-content {
+
+        @include media('>=desktop') {
+            padding: 0 rem(50px);
+        }
+
+        @include media('>=large') {
+            padding: 0 rem(100px);
+        }
+
+        .logo {
+            width: rem(100px);
+            height: rem(30px);
+            margin: 0 auto rem(30px);
+
+            @include media('>=tablet') {
+                width: rem(140px);
+                height: rem(50px);
+                margin: 0 0 rem(30px)
+            }
+
+            @include media('>=desktop') {
+                width: rem(170px);
+                height: rem(64px);
+            }
+        }
+
+        .nav-footer {
+
+            li {
+                white-space: nowrap;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                    transition: color 0.5s;
+    
+                    @include media('>=tablet') {
+                        &:hover {
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.section-video {
+	position: relative;
+	min-height: rem(410px);
+	background: url(images/bg-bot.jpg) no-repeat 50% / cover;
+
+	@include media('>=desktop') {
+		min-height: rem(610px);
+	}
+
+	.button-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		&:hover {
+			svg {
+				transform: scale(0.8);
+				path {
+					fill: $blue;
+				}
+			}
+		}
+
+		svg {
+			width: rem(70px);
+			height: rem(70px);
+			transition: transform 0.5s;
+
+			@include media('>=tablet') {
+				width: rem(90px);
+				height: rem(90px);
+			}
+
+			@include media('>=desktop') {
+				width: rem(112px);
+				height: rem(112px);
+			}
+
+			path {
+				transition: fill 0.5s;
+			}
+		}
+	}
+}

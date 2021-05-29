@@ -1,0 +1,75 @@
+.section-sight {
+	.row {
+
+		&:first-child {
+			margin-bottom: rem(30px);
+
+			@include media('>=desktop') {
+				margin-bottom: rem(50px);
+			}
+
+			.visual {
+
+				&:first-child {
+					@include media('>=large') {
+						padding-right: rem(30px);
+					}
+				}
+
+			}
+		}
+
+		&:last-child {
+
+			.visual {
+				@include media('>=large') {
+					padding-left: rem(30px);
+				}
+			}
+
+			.title {
+
+				@include media('>=large') {
+					margin-bottom: rem(40px);
+				}
+			}
+
+		}
+	}
+
+	.visual {
+		margin-bottom: rem(20px);
+
+		@include media('>=desktop') {
+			margin-bottom: 0;
+		}
+	}
+
+	.description {
+
+		@include media('>=desktop') {
+			padding: rem(20px) rem(50px);
+		}
+
+		@include media('>=large') {
+			padding: rem(20px) rem(100px);
+		}
+
+		.title {
+			margin-bottom: rem(20px);
+
+			// @include media('>=large') {
+			// 	margin-bottom: rem(50px);
+			// }
+		}
+
+		.text {
+			margin-bottom: rem(20px);
+
+			@include media('>=large') {
+				margin-bottom: rem(50px);
+			}
+		}
+	}
+
+}

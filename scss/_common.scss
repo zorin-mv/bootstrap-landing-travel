@@ -1,0 +1,247 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+#wrapper {
+	width: 100%;
+	min-width: rem(320px);
+	position: relative;
+	overflow: hidden;
+	font-family: 'lato', sans-serif;
+	color: $main-color;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+section {
+	padding: rem(50px) 0;
+
+	@include media('>=tablet') {
+		padding: rem(60px) 0;
+	}
+
+	@include media('>=desktop') {
+		padding: rem(70px) 0;
+	}
+
+	@include media('>=large') {
+		padding: rem(90px) 0;
+	}
+}
+
+h1 {
+	font-size: rem(30px);
+	font-weight: 700;
+	line-height: 1.2;
+	font-style: normal;
+
+	@include media('>=tablet') {
+		font-size: rem(40px);
+	}
+
+	@include media('>=desktop') {
+		font-size: rem(50px);
+	}
+}
+
+h2 {
+	font-size: rem(25px);
+	font-weight: 700;
+	line-height: 1.2;
+
+	@include media('>=tablet') {
+		font-size: rem(30px);
+	}
+
+	@include media('>=desktop') {
+		font-size: rem(35px);
+	}
+}
+
+h3 {
+	font-size: rem(20px);
+	font-weight: 500;
+	line-height: 1.5;
+
+	@include media('>=desktop') {
+		font-size: rem(30px);
+	}
+}
+
+h4 {
+	font-size: rem(18px);
+	font-weight: 500;
+	line-height: 1.5;
+	margin-bottom: 0;
+}
+
+.link {
+
+	a {
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $blue;
+		transition: color 0.3s;
+
+		&:hover {
+
+			&::before {
+				width: 100%;
+				left: 0;
+			}
+
+		}
+
+		&::before {
+			@extend %underline;
+			background-color: $blue;
+		}
+
+	}
+
+	.icon-arrow:after {
+		content: "\e900";
+		color: #006dfe;
+		font-size: rem(8px);
+		vertical-align: middle;
+		margin-left: rem(20px);
+	}
+
+}
+
+.text {
+	font-size: rem(14px);
+	line-height: 1.5;
+
+	@include media('>=tablet') {
+		font-size: rem(16px);
+	}
+}
+
+[type="text"] {
+	background-color: transparent;
+	border: 0;
+	border-bottom: rem( 2px) solid #BFC0C5;
+	padding: rem(10px) rem(30px);
+	color: $white;
+
+	@include media('>=tablet') {
+		padding: rem(15px) rem(35px);
+		font-size: rem(16px);
+	}
+
+	@include media('>=desktop') {
+		min-width: rem(300px);
+		font-size: rem(18px);
+	}
+
+	&::placeholder {
+		color: $white;
+		font-size: rem(14px);
+
+		@include media('>=tablet') {
+			font-size: rem(16px);
+		}
+
+		@include media('>=desktop') {
+			font-size: rem(18px);
+		}
+	}
+
+
+
+}
+
+.input {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: rem(15px);
+		height: rem(15px);
+		border-radius: 100%;
+		border: rem(2px) solid $white;
+	}
+}
+
+button {
+	display: block;
+	background-color: $blue;
+	text-transform: uppercase;
+	font-family: inherit;
+	color: $white;
+	padding: rem(5px);
+	border: rem(2px) solid transparent;
+	transition: color 0.5s, background-color 0.5s;
+
+	&:hover {
+		color: $blue;
+		background-color: $white;
+		border: rem(2px) solid $blue;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+.slider-inspiration,
+.slider-places {
+
+	.slick-track {
+		display: flex;
+	}
+
+	.slick-list {
+		overflow: hidden;
+	}
+
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+
+		li {
+			list-style: none;
+			padding: 0 rem(6px);
+		}
+
+		button {
+			font-size: 0;
+			padding: 0;
+			width: rem(30px);
+			height: rem(5px);
+			background-color: $blue;
+			transition: color 0.5s;
+			border: rem(2px) solid $white;
+
+			@include media('>=tablet') {
+				width: rem(50px);
+				height: rem(8px);
+			}
+		}
+
+		.slick-active button {
+			background-color: $white;
+			border: rem(2px) solid $blue;
+		}
+
+	}
+}
+
